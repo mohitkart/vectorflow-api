@@ -37,35 +37,7 @@ class Edge(BaseModel):
 class PipelineRequest(BaseModel):
     nodes: List[Dict[str, Any]]
     edges: List[Dict[str, Any]]
-
-
-# DAG validation using DFS
-# def is_dag(nodes: List[any], edges: List[Edge]) -> bool:
-#     graph = {node.id: [] for node in nodes}
-#     for edge in edges:
-#         graph[edge.source].append(edge.target)
-
-#     visited = set()
-#     rec_stack = set()
-
-#     def dfs(node):
-#         if node in rec_stack:
-#             return False  # cycle found
-#         if node in visited:
-#             return True
-#         visited.add(node)
-#         rec_stack.add(node)
-#         for neighbor in graph[node]:
-#             if not dfs(neighbor):
-#                 return False
-#         rec_stack.remove(node)
-#         return True
-
-#     for node in graph:
-#         if node not in visited:
-#             if not dfs(node):
-#                 return False
-#     return True
+    is_dag: bool
 
 @app.get('/')
 def read_root():
@@ -76,6 +48,5 @@ def parse_pipeline(data: PipelineRequest):
     return {
         "num_nodes": len(data.nodes),
         "num_edges": len(data.edges),
-        # "is_dag": is_dag(data.nodes, data.edges)
-        "is_dag": True
+        "is_dag": data.is_dag
     }
