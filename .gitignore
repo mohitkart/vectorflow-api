@@ -1,0 +1,71 @@
+# ========================
+# Python bytecode
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================
+# Virtual environments
+# ========================
+venv/
+.venv/
+env/
+ENV/
+virtualenv/
+pip-wheel-metadata/
+
+# ========================
+# Environment variables
+# ========================
+.env
+.env.*
+*.env
+
+# ========================
+# IDE / Editor configs
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+
+# ========================
+# Test / coverage
+# ========================
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+
+# ========================
+# Build / packaging
+# ========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ========================
+# Jupyter Notebook
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# FastAPI / Uvicorn
+# ========================
+*.pid
