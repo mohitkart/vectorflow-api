@@ -14,7 +14,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-@app.get('/')
+
 
 class Node(BaseModel):
     id: str
@@ -58,7 +58,7 @@ class PipelineRequest(BaseModel):
 #                 return False
 #     return True
 
-
+@app.get('/')
 def read_root():
     return {'Ping': 'Pong'}
 
