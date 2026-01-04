@@ -27,12 +27,6 @@ Create the environment file by copying the example file:
 ```bash
 cp env-example .env
 ```
-
-Create the environment file by copying the example file:
-
-```bash
-cp env-example .env
-```
 Update the .env file with the required configuration values.
 
 
