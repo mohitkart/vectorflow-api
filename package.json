@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "cd api && python3 -m uvicorn index:app --reload",
+    "start-ws": "cd api && py -m uvicorn index:app --reload",
     "intall-req":"cd pip install -r requirements.txt"
   }
 }
